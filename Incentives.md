@@ -61,8 +61,6 @@ print(missing_values[missing_values > 0])
 
 ### Data Cleaning
 
-- According to the overview of the dataset, it was found that some columns had **incorrect data types**, such as **numeric columns** stored as **objects** and **missing values** scattered throughout. The **data cleaning process** is essential to ensure **consistency** by converting these columns to their appropriate types, handling missing values by filling them with **zeros** or **"unknown"** where necessary, and removing **duplicate entries**. This approach improves the **accuracy** and **reliability** of the dataset for further analysis.
-
 ``` python
 # Define columns that should be converted to numeric data types
 numeric_columns = ['artist_count', 'released_year', 'released_month', 'released_day', 'in_spotify_playlists', 
@@ -114,6 +112,10 @@ print(f"Cleaned data saved to {cleaned_file_path}.")
 ```
 
 <img width="1128" alt="Screenshot 2024-11-03 at 9 45 19 PM" src="https://github.com/user-attachments/assets/a5d35dae-d137-4802-a5cd-b57156166161">
+
+- This code **cleans** and **standardizes** the **Spotify dataset** to ensure **consistency** and **completeness**. It starts by defining two sets of columns for conversion: **`numeric_columns`**, which should contain **numeric data**, and **`string_columns`**, meant to store **text**. It then converts the columns in `numeric_columns` to **numeric data types**, handling any **errors** by setting invalid entries as **NaN**. **Missing values** in numeric columns are filled with **0**, while missing values in string columns are replaced with **'unknown'**. Next, any **floats** in numeric columns are converted to **integers** for uniformity. **Duplicate rows** are removed to maintain **unique entries**, and a final check confirms that there are no remaining **missing values**. Afterward, it verifies **data types** for each column post-cleaning and saves the **cleaned dataset** as a new **CSV file**, **'spotify-2023-cleaned.csv'**, for future **analysis**.
+
+
 
 ### Basic Descriptive Statistics
    - **Streams Statistics:** What are the **mean, median, and standard deviation** of the streams?
