@@ -123,17 +123,23 @@ print(f"Cleaned data saved to {cleaned_file_path}.")
 
 - The code begins by loading a **cleaned version** of the **Spotify dataset** and calculating basic **descriptive statistics** for the **'streams'** column, including the **mean**, **median**, and **standard deviation**. These statistics provide insights into the distribution of streaming counts, with the output indicating a mean of approximately **513.6 million streams**, a median of about **290.2 million**, and a substantial standard deviation of **566.8 million**, suggesting significant variability in the streaming numbers.
 
-- Following the statistics, the code sets up a series of **visualizations** to explore the dataset further. Four **subplots** are created: the first two are **bar graphs** displaying the distribution of **released years** and **artist counts**, respectively. The visualizations show that **2022** has the highest distribution of released songs, which may indicate a **trend** of increasing music releases over the years, possibly driven by the growing popularity of **digital streaming platforms** and the ease of music distribution. The **artist count** graph reveals that most tracks feature a **single artist**, underscoring the trend towards **solo performances** in the music industry.
+  Following the statistics, the code sets up a series of **visualizations** to explore the dataset further. Four **subplots** are created: the first two are **bar graphs** displaying the distribution of **released years** and **artist counts**, respectively. The visualizations show that **2022** has the highest distribution of released songs, which may indicate a **trend** of increasing music releases over the years, possibly driven by the growing popularity of **digital streaming platforms** and the ease of music distribution. The **artist count** graph reveals that most tracks feature a **single artist**, underscoring the trend towards **solo performances** in the music industry.
 
-- The last two subplots are **box plots** for `released_year` and `artist_count`, providing a **visual summary** of the data's spread and outliers. For the `released_year`, the code identifies **151 outliers**, with years ranging from **1930 to 2016**. In contrast, for `artist_count`, there are **27 outliers**, with counts ranging from tracks featuring **4 to 8 artists**.
+  The last two subplots are **box plots** for `released_year` and `artist_count`, providing a **visual summary** of the data's spread and outliers. For the `released_year`, the code identifies **151 outliers**, with years ranging from **1930 to 2016**. In contrast, for `artist_count`, there are **27 outliers**, with counts ranging from tracks featuring **4 to 8 artists**.
 
 ### Top Performers
    - **Top Tracks:** Which track has the highest number of streams? List the **top 5 most streamed** tracks.
    - **Frequent Artists:** Who are the **top 5 most frequent artists** based on track count?
 
+- This code snippet identifies the **top performers** in the **Spotify dataset** by analyzing **streaming counts** and **artist frequency**. First, it finds the track with the highest number of streams and displays the **top five most streamed tracks**. According to the results, **"Blinding Lights"** leads with approximately **3.7 billion streams**, followed by **"Shape of You"** with about **3.56 billion streams**, **"Someone You Loved"** with approximately **2.89 billion streams**, **"Dance Monkey"** at around **2.86 billion streams**, and **"Sunflower - Spider-Man: Into the Spider-Verse"** with about **2.81 billion streams**.
+
+   Next, the code identifies the **top five most frequent artists** based on the number of tracks present in the dataset. The results show that **Bad Bunny** has the highest count with **40 tracks**, followed closely by **Taylor Swift** with **38 tracks**. **The Weeknd** appears with **37 tracks**, while **SZA** and **Kendrick Lamar** each have **23 tracks**. This analysis highlights not only the most popular tracks based on streaming but also the artists who dominate the music landscape in terms of **track quantity**.
+
 ### Temporal Trends
    - **Yearly Trends:** Analyze the **trend** in the number of tracks released annually.
    - **Monthly Patterns:** Does the release pattern vary by month? Which month has the most releases?
+
+
 
 ### Genre and Music Characteristics
    - **Streams vs. Attributes:** Examine correlation between **streams** and musical attributes like **bpm, danceability_%, energy_%**.
