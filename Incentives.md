@@ -28,6 +28,8 @@ import seaborn as sns
 spotify_data = pd.read_csv('spotify-2023.csv', encoding='latin1')
 ```
 
+- The code begins by importing essential libraries for **data manipulation**, **visualization**, and **analysis** in Python. It imports **NumPy** as `np` for **numerical operations**, **Pandas** as `pd` for handling data in a **structured format**, **Matplotlib's** `pyplot` as `plt` for creating **static visualizations**, and **Seaborn** as `sns` for enhanced **statistical graphics**. Following the imports, the code loads the **Spotify 2023 dataset** from a **CSV file** named **'spotify-2023.csv'** into a **Pandas DataFrame** called `spotify_data`. The `encoding='latin1'` parameter is specified to ensure that any **special characters** within the dataset are read correctly, which is crucial for accurate **data representation** and **analysis**. This setup establishes a foundation for further **exploration** and **analysis** of the dataset.
+
 ### Overview of Dataset
    - **Dataset Size:** How many rows and columns?
    - **Data Types:** What are the types of each column? Any **missing values**?
