@@ -63,9 +63,6 @@ print(missing_values[missing_values > 0])
 
 - According to the overview of the dataset, it was found that some columns had **incorrect data types**, such as **numeric columns** stored as **objects** and **missing values** scattered throughout. The **data cleaning process** is essential to ensure **consistency** by converting these columns to their appropriate types, handling missing values by filling them with **zeros** or **"unknown"** where necessary, and removing **duplicate entries**. This approach improves the **accuracy** and **reliability** of the dataset for further analysis.
 
-<img width="1128" alt="Screenshot 2024-11-03 at 9 45 19 PM" src="https://github.com/user-attachments/assets/a5d35dae-d137-4802-a5cd-b57156166161">
-
-
 ``` python
 # Define columns that should be converted to numeric data types
 numeric_columns = ['artist_count', 'released_year', 'released_month', 'released_day', 'in_spotify_playlists', 
@@ -115,6 +112,8 @@ cleaned_file_path = 'spotify-2023-cleaned.csv'
 spotify_data.to_csv(cleaned_file_path, index=False)
 print(f"Cleaned data saved to {cleaned_file_path}.")
 ```
+
+<img width="1128" alt="Screenshot 2024-11-03 at 9 45 19 PM" src="https://github.com/user-attachments/assets/a5d35dae-d137-4802-a5cd-b57156166161">
 
 ### Basic Descriptive Statistics
    - **Streams Statistics:** What are the **mean, median, and standard deviation** of the streams?
