@@ -32,7 +32,6 @@ display(spotify_data)
 <img width="1018" alt="Screenshot 2024-11-03 at 8 36 50 PM" src="https://github.com/user-attachments/assets/860b17fe-3345-425f-83ab-e70224735be3">
 <img width="1032" alt="Screenshot 2024-11-03 at 8 36 56 PM" src="https://github.com/user-attachments/assets/4bd58836-9293-4fd9-9fac-f12c95da5905">
 
-
 - The code begins by importing essential libraries for **data manipulation**, **visualization**, and **analysis** in Python. It imports **NumPy** as `np` for **numerical operations**, **Pandas** as `pd` for handling data in a **structured format**, **Matplotlib's** `pyplot` as `plt` for creating **static visualizations**, and **Seaborn** as `sns` for enhanced **statistical graphics**. Following the imports, the code loads the **Spotify 2023 dataset** from a **CSV file** named **'spotify-2023.csv'** into a **Pandas DataFrame** called `spotify_data`. The `encoding='latin1'` parameter is specified to ensure that any **special characters** within the dataset are read correctly, which is crucial for accurate **data representation** and **analysis**. This setup establishes a foundation for further **exploration** and **analysis** of the dataset.
 
 ### Overview of Dataset
@@ -57,10 +56,14 @@ print(missing_values[missing_values > 0])
 
 <img width="1128" alt="Screenshot 2024-11-03 at 8 28 48 PM" src="https://github.com/user-attachments/assets/c387c30c-6f45-453b-a605-2f75d0810751">
 
+- This code provides an overview of the **Spotify dataset** by examining its **dimensions**, **column data types**, and **missing values**. First, it retrieves and prints the dataset's **dimensions**, revealing **953 rows** and **24 columns**. Then, it displays the **data types** of each column, helping to understand the **structure** and **content type** of the dataset; most columns are **integers**, with a few containing **objects** (strings). Finally, it checks for any **missing values**, identifying two columns, **`in_shazam_charts`** and **`key`**, with missing entries, reporting counts of **50** and **95**, respectively. This summary offers a foundational understanding of the **dataset**, highlighting areas that may need further **cleaning** or **handling**.
+
 
 ### Data Cleaning
 
 - According to the overview of the dataset, it was found that some columns had **incorrect data types**, such as **numeric columns** stored as **objects** and **missing values** scattered throughout. The **data cleaning process** is essential to ensure **consistency** by converting these columns to their appropriate types, handling missing values by filling them with **zeros** or **"unknown"** where necessary, and removing **duplicate entries**. This approach improves the **accuracy** and **reliability** of the dataset for further analysis.
+
+<img width="1128" alt="Screenshot 2024-11-03 at 9 45 19 PM" src="https://github.com/user-attachments/assets/a5d35dae-d137-4802-a5cd-b57156166161">
 
 
 ``` python
