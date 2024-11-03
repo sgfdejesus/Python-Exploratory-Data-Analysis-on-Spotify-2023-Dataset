@@ -8,12 +8,14 @@ Dataset source: [Kaggle - Most Streamed Spotify Songs 2023](https://www.kaggle.c
 
 ## 📈 Analysis Workflow
 
-- **Data Loading tapos overview then Cleaning**: Load the dataset, handle missing values, and confirm data types.
+- **Data Loading, Overview, and Cleaning**: Load the dataset, handle missing values, and confirm data types.
 - **Exploratory Analysis**: Perform descriptive statistics and initial visualizations to gain insights.
 - **In-Depth Analysis**: Dive deeper into specific aspects like **temporal trends** and **platform comparisons**.
 - **Insight Generation**: Summarize findings and provide recommendations.
 
 ---
+
+### Data Loading
 
 ``` python
 # Import libraries for data manipulation, visualization, and analysis
@@ -26,7 +28,7 @@ import seaborn as sns
 spotify_data = pd.read_csv('spotify-2023.csv', encoding='latin1')
 ```
 
-### 1. Overview of Dataset
+### Overview of Dataset
    - **Dataset Size:** How many rows and columns?
    - **Data Types:** What are the types of each column? Any **missing values**?
 
@@ -46,8 +48,10 @@ print("Columns with missing values and their counts:")
 print(missing_values[missing_values > 0])
 ```
 
-Data Cleaning 
-   - According to the Overview of the Dataset, it was found that some columns had incorrect data types, such as numeric columns stored as objects and missing values scattered throughout. With that, the data cleaning process was essential to ensure consistency by converting these columns to their appropriate types, handling missing values by filling them with zeros or unknown where necessary, and removing duplicate entries. This approach improves the accuracy and reliability of the dataset for further analysis.
+### Data Cleaning
+
+- According to the overview of the dataset, it was found that some columns had **incorrect data types**, such as **numeric columns** stored as **objects** and **missing values** scattered throughout. The **data cleaning process** is essential to ensure **consistency** by converting these columns to their appropriate types, handling missing values by filling them with **zeros** or **"unknown"** where necessary, and removing **duplicate entries**. This approach improves the **accuracy** and **reliability** of the dataset for further analysis.
+
 
 ``` python
 # Define columns that should be converted to numeric data types
@@ -99,30 +103,32 @@ spotify_data.to_csv(cleaned_file_path, index=False)
 print(f"Cleaned data saved to {cleaned_file_path}.")
 ```
 
-### 2. Basic Descriptive Statistics
+### Basic Descriptive Statistics
    - **Streams Statistics:** What are the **mean, median, and standard deviation** of the streams?
    - **Released Year & Artist Count:** What is the distribution? Are there any **trends** or **outliers**?
 
-### 3. Top Performers
+### Top Performers
    - **Top Tracks:** Which track has the highest number of streams? List the **top 5 most streamed** tracks.
    - **Frequent Artists:** Who are the **top 5 most frequent artists** based on track count?
 
-### 4. Temporal Trends
+### Temporal Trends
    - **Yearly Trends:** Analyze the **trend** in the number of tracks released annually.
    - **Monthly Patterns:** Does the release pattern vary by month? Which month has the most releases?
 
-### 5. Genre and Music Characteristics
+### Genre and Music Characteristics
    - **Streams vs. Attributes:** Examine correlation between **streams** and musical attributes like **bpm, danceability_%, energy_%**.
    - **Attribute Relationships:** Is there a correlation between **danceability_%** and **energy_%**? How about **valence_%** and **acousticness_%**?
 
-### 6. Platform Popularity
+### Platform Popularity
    - **Platform Comparison:** Compare track counts in **Spotify Playlists, Deezer Playlists**, and **Apple Playlists**. Which platform favors the most popular tracks?
 
-### 7. Advanced Analysis
+### Advanced Analysis
    - **Key & Mode Patterns:** Based on **streams**, are there patterns among tracks with similar **key** or **mode** (Major vs. Minor)?
    - **Frequent Artists in Playlists/Charts:** Do certain **artists** consistently appear in more playlists or charts?
 
 ---
+
+# waley pa
 
 ## 📋 General Guidelines
 
