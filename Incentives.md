@@ -6,7 +6,7 @@ Dataset source: [Kaggle - Most Streamed Spotify Songs 2023](https://www.kaggle.c
 
 ---
 
-## 📈 Analysis Workflow
+## 📈 Analysis Workflow (will change pa)
 
 - **Data Loading, Overview, and Cleaning**: Load the dataset, handle missing values, and confirm data types.
 - **Exploratory Analysis**: Perform descriptive statistics and initial visualizations to gain insights.
@@ -140,7 +140,7 @@ print(f"Cleaned data saved to {cleaned_file_path}.")
 
 # waley pa
 
-## 📋 General Guidelines
+## 📋 General Guidelines (hahahahha)
 
 1. **Dataset Familiarization**  
    - Inspect the dataset structure, checking for **missing values** and **data types**.
