@@ -26,7 +26,12 @@ import seaborn as sns
 
 # Load the Spotify 2023 dataset, ensuring proper encoding for special characters
 spotify_data = pd.read_csv('spotify-2023.csv', encoding='latin1')
+display(spotify_data)
 ```
+
+<img width="1018" alt="Screenshot 2024-11-03 at 8 36 50 PM" src="https://github.com/user-attachments/assets/860b17fe-3345-425f-83ab-e70224735be3">
+<img width="1032" alt="Screenshot 2024-11-03 at 8 36 56 PM" src="https://github.com/user-attachments/assets/4bd58836-9293-4fd9-9fac-f12c95da5905">
+
 
 - The code begins by importing essential libraries for **data manipulation**, **visualization**, and **analysis** in Python. It imports **NumPy** as `np` for **numerical operations**, **Pandas** as `pd` for handling data in a **structured format**, **Matplotlib's** `pyplot` as `plt` for creating **static visualizations**, and **Seaborn** as `sns` for enhanced **statistical graphics**. Following the imports, the code loads the **Spotify 2023 dataset** from a **CSV file** named **'spotify-2023.csv'** into a **Pandas DataFrame** called `spotify_data`. The `encoding='latin1'` parameter is specified to ensure that any **special characters** within the dataset are read correctly, which is crucial for accurate **data representation** and **analysis**. This setup establishes a foundation for further **exploration** and **analysis** of the dataset.
 
@@ -49,6 +54,9 @@ missing_values = spotify_data.isnull().sum()
 print("Columns with missing values and their counts:")
 print(missing_values[missing_values > 0])
 ```
+
+<img width="1128" alt="Screenshot 2024-11-03 at 8 28 48 PM" src="https://github.com/user-attachments/assets/c387c30c-6f45-453b-a605-2f75d0810751">
+
 
 ### Data Cleaning
 
