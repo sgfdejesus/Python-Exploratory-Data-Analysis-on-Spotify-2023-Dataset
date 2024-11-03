@@ -115,11 +115,17 @@ print(f"Cleaned data saved to {cleaned_file_path}.")
 
 - This code **cleans** and **standardizes** the **Spotify dataset** to ensure **consistency** and **completeness**. It starts by defining two sets of columns for conversion: **`numeric_columns`**, which should contain **numeric data**, and **`string_columns`**, meant to store **text**. It then converts the columns in `numeric_columns` to **numeric data types**, handling any **errors** by setting invalid entries as **NaN**. **Missing values** in numeric columns are filled with **0**, while missing values in string columns are replaced with **'unknown'**. Next, any **floats** in numeric columns are converted to **integers** for uniformity. **Duplicate rows** are removed to maintain **unique entries**, and a final check confirms that there are no remaining **missing values**. Afterward, it verifies **data types** for each column post-cleaning and saves the **cleaned dataset** as a new **CSV file**, **'spotify-2023-cleaned.csv'**, for future **analysis**.
 
-
-
 ### Basic Descriptive Statistics
    - **Streams Statistics:** What are the **mean, median, and standard deviation** of the streams?
    - **Released Year & Artist Count:** What is the distribution? Are there any **trends** or **outliers**?
+
+
+
+- The code begins by loading a **cleaned version** of the **Spotify dataset** and calculating basic **descriptive statistics** for the **'streams'** column, including the **mean**, **median**, and **standard deviation**. These statistics provide insights into the distribution of streaming counts, with the output indicating a mean of approximately **513.6 million streams**, a median of about **290.2 million**, and a substantial standard deviation of **566.8 million**, suggesting significant variability in the streaming numbers.
+
+- Following the statistics, the code sets up a series of **visualizations** to explore the dataset further. Four **subplots** are created: the first two are **bar graphs** displaying the distribution of **released years** and **artist counts**, respectively. The visualizations show that **2022** has the highest distribution of released songs, which may indicate a **trend** of increasing music releases over the years, possibly driven by the growing popularity of **digital streaming platforms** and the ease of music distribution. The **artist count** graph reveals that most tracks feature a **single artist**, underscoring the trend towards **solo performances** in the music industry.
+
+- The last two subplots are **box plots** for `released_year` and `artist_count`, providing a **visual summary** of the data's spread and outliers. For the `released_year`, the code identifies **151 outliers**, with years ranging from **1930 to 2016**. In contrast, for `artist_count`, there are **27 outliers**, with counts ranging from tracks featuring **4 to 8 artists**.
 
 ### Top Performers
    - **Top Tracks:** Which track has the highest number of streams? List the **top 5 most streamed** tracks.
@@ -164,5 +170,9 @@ print(f"Cleaned data saved to {cleaned_file_path}.")
    - Summarize insights about tracks, artists, or musical trends that could help explain a track's popularity.
 
 ---
+
+
+
+
 
 
