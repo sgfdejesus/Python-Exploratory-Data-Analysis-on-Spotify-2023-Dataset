@@ -1,4 +1,4 @@
-# 🎶 Exploratory Data Analysis: Most Streamed Spotify Songs 2023 🎶
+# 🎶 Exploratory Data Analysis: Most Streamed Spotify Songs 2023 🎶 andami paaaa
 
 This project performs an **Exploratory Data Analysis (EDA)** on a dataset detailing popular tracks on Spotify in 2023. The goal is to analyze, visualize, and interpret data to extract insights about trends, characteristics, and factors that contribute to a song's popularity.
 
