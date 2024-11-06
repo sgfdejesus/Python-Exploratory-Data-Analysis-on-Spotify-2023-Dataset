@@ -29,9 +29,6 @@ spotify_data = pd.read_csv('spotify-2023.csv', encoding='latin1')
 display(spotify_data)
 ```
 
-<img width="1018" alt="Screenshot 2024-11-03 at 8 36 50 PM" src="https://github.com/user-attachments/assets/860b17fe-3345-425f-83ab-e70224735be3">
-<img width="1032" alt="Screenshot 2024-11-03 at 8 36 56 PM" src="https://github.com/user-attachments/assets/4bd58836-9293-4fd9-9fac-f12c95da5905">
-
 - The code begins by importing essential libraries for **data manipulation**, **visualization**, and **analysis** in Python. It imports **NumPy** as `np` for **numerical operations**, **Pandas** as `pd` for handling data in a **structured format**, **Matplotlib's** `pyplot` as `plt` for creating **static visualizations**, and **Seaborn** as `sns` for enhanced **statistical graphics**. Following the imports, the code loads the **Spotify 2023 dataset** from a **CSV file** named **'spotify-2023.csv'** into a **Pandas DataFrame** called `spotify_data`. The `encoding='latin1'` parameter is specified to ensure that any **special characters** within the dataset are read correctly, which is crucial for accurate **data representation** and **analysis**. This setup establishes a foundation for further **exploration** and **analysis** of the dataset.
 
 ### Overview of Dataset
@@ -53,8 +50,6 @@ missing_values = spotify_data.isnull().sum()
 print("Columns with missing values and their counts:")
 print(missing_values[missing_values > 0])
 ```
-
-<img width="1128" alt="Screenshot 2024-11-03 at 8 28 48 PM" src="https://github.com/user-attachments/assets/c387c30c-6f45-453b-a605-2f75d0810751">
 
 - This code provides an overview of the **Spotify dataset** by examining its **dimensions**, **column data types**, and **missing values**. First, it retrieves and prints the dataset's **dimensions**, revealing **953 rows** and **24 columns**. Then, it displays the **data types** of each column, helping to understand the **structure** and **content type** of the dataset; most columns are **integers**, with a few containing **objects** (strings). Finally, it checks for any **missing values**, identifying two columns, **`in_shazam_charts`** and **`key`**, with missing entries, reporting counts of **50** and **95**, respectively. This summary offers a foundational understanding of the **dataset**, highlighting areas that may need further **cleaning** or **handling**.
 
@@ -110,8 +105,6 @@ cleaned_file_path = 'spotify-2023-cleaned.csv'
 spotify_data.to_csv(cleaned_file_path, index=False)
 print(f"Cleaned data saved to {cleaned_file_path}.")
 ```
-
-<img width="1128" alt="Screenshot 2024-11-03 at 9 45 19 PM" src="https://github.com/user-attachments/assets/a5d35dae-d137-4802-a5cd-b57156166161">
 
 - This code **cleans** and **standardizes** the **Spotify dataset** to ensure **consistency** and **completeness**. It starts by defining two sets of columns for conversion: **`numeric_columns`**, which should contain **numeric data**, and **`string_columns`**, meant to store **text**. It then converts the columns in `numeric_columns` to **numeric data types**, handling any **errors** by setting invalid entries as **NaN**. **Missing values** in numeric columns are filled with **0**, while missing values in string columns are replaced with **'unknown'**. Next, any **floats** in numeric columns are converted to **integers** for uniformity. **Duplicate rows** are removed to maintain **unique entries**, and a final check confirms that there are no remaining **missing values**. Afterward, it verifies **data types** for each column post-cleaning and saves the **cleaned dataset** as a new **CSV file**, **'spotify-2023-cleaned.csv'**, for future **analysis**.
 
