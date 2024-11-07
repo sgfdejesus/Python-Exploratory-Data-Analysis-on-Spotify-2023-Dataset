@@ -154,25 +154,12 @@ print(f"Cleaned data saved to {cleaned_file_path}.")
 #### Key Insights
 - From the output, it can seen that after performing the cleaning operations, there are no remaining missing values in the dataset. The cleaned dataset now has consistent and appropriate data types for each column, such as int for numeric columns and object for string columns, confirming that all transformations were successful. Notably, the released_month column has been converted to string names of the months (e.g., January, February), replacing numeric month values with more readable names. The absence of missing values and the proper conversion of data types indicate that the dataset is now ready for further analysis and visualization. The cleaned dataset has been successfully saved as 'spotify-2023-cleaned.csv', ensuring that all changes are retained and accessible for future work.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### 📊 Basic Descriptive Statistics
    - **Streams Statistics:** What are the **mean, median, and standard deviation** of the streams?
    - **Released Year & Artist Count:** What is the distribution? Are there any **trends** or **outliers**?
 
 #### About the Code
+- This code performs an analysis of the Spotify dataset to identify key trends and outliers. It begins by calculating summary statistics for the streams column, including the mean, median, and standard deviation, providing an overview of how stream counts are distributed. The code then generates visualizations, using a 2x2 grid of subplots to display the distribution of released years and artist counts, as well as boxplots to highlight data spread for these two variables. A function for detecting outliers using the Interquartile Range (IQR) method is also included, and are printed, giving further insight into any anomalies in the data.
 
 ``` python
 # Load the cleaned Spotify dataset
@@ -262,6 +249,7 @@ print(unique_artist_outliers)
 <img width="1241" alt="Screenshot 2024-11-07 at 12 13 01 PM" src="https://github.com/user-attachments/assets/82ea0172-b6e8-4957-a094-5dc7fd31eadd">
 
 #### Key Insights
+- From the output, the summary statistics for streams show that the average number of streams is about 513 million, with a median of 290 million and a high standard deviation of 566 million, indicating significant variation in stream counts across tracks. The distribution of released years reveals that 2022 had the highest number of releases, reflecting the growing prominence of digital platforms over the years. Additionally, the artist count distribution shows that solo artists dominate the dataset, as indicated by the frequency of 1 artist per track. The boxplots further confirm the spread of data for these variables. Regarding outliers, the dataset contains some extreme values in both released year and artist count, with years like 1930, 1942, and up to 2016 appearing as outliers, as well as tracks with 2 to 8 artists, which are considered outliers for artist count.
 
 ### 🏆 Top Performers
 
