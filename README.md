@@ -38,7 +38,7 @@ Dataset source: [Kaggle - Most Streamed Spotify Songs 2023](https://www.kaggle.c
 #### About the Code
 - This code snippet serves as the initial step for a comprehensive data analysis and visualization project on a **Spotify dataset**. By importing essential libraries such as **pandas**, **numpy**, **matplotlib**, and **seaborn**, the code provides the foundational tools needed for manipulating, analyzing, and visualizing the dataset. The core operation here is loading the dataset into a **pandas DataFrame** named `spotify_data` using `pd.read_csv()`. To ensure special characters are properly interpreted, the **encoding** is set to `latin1`, which helps avoid any data import errors. Finally, the '**display(spotify_data)**' command allows us to preview the initial structure and content of the dataset, which is vital for understanding the variables and potential transformations needed for subsequent analyses.
 
-`` python
+``` python
 # Import necessary libraries for data manipulation, analysis, and visualization
 import pandas as pd             
 import numpy as np    
