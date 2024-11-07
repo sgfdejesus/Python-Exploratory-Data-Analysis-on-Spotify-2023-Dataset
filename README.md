@@ -82,18 +82,18 @@ print("Columns with missing values and their counts:")
 print(missing_values[missing_values > 0])
 ```
 
+<img width="1241" alt="Screenshot 2024-11-07 at 12 12 31 PM" src="https://github.com/user-attachments/assets/fe80cc10-62b5-4c4a-a2d4-b4a4e67901ca">
+
 ### Data Cleaning
 
 ``` python
 # Define the columns expected to have numerical data for conversion and cleaning
-numeric_columns = [
-    'artist_count', 'released_year', 'released_month', 'released_day', 
-    'in_spotify_playlists', 'in_spotify_charts', 'streams', 
-    'in_apple_playlists', 'in_apple_charts', 'in_deezer_playlists', 
-    'in_deezer_charts', 'in_shazam_charts', 'bpm', 'danceability_%', 
-    'valence_%', 'energy_%', 'acousticness_%', 'instrumentalness_%', 
-    'liveness_%', 'speechiness_%'
-]
+numeric_columns = ['artist_count', 'released_year', 'released_month', 'released_day', 
+                   'in_spotify_playlists', 'in_spotify_charts', 'streams', 
+                   'in_apple_playlists', 'in_apple_charts', 'in_deezer_playlists', 
+                   'in_deezer_charts', 'in_shazam_charts', 'bpm', 'danceability_%', 
+                   'valence_%', 'energy_%', 'acousticness_%', 'instrumentalness_%', 
+                   'liveness_%', 'speechiness_%']
 
 # Define the columns expected to contain string data
 string_columns = ['track_name', 'artist(s)_name', 'key', 'mode']
