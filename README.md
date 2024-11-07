@@ -6,7 +6,7 @@ Dataset source: [Kaggle - Most Streamed Spotify Songs 2023](https://www.kaggle.c
 
 ---
 
-# 📑 Table of Contents
+## 📑 Table of Contents
 
 - [🔍 Overview of Dataset](#overview-of-dataset)
    - Dataset Size
