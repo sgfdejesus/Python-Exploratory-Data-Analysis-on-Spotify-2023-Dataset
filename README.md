@@ -36,7 +36,7 @@ Dataset source: [Kaggle - Most Streamed Spotify Songs 2023](https://www.kaggle.c
 ### 📥 Data Loading
 
 #### About the Code
-- This code is designed to load and inspect a dataset of the most streamed Spotify songs from 2023, provided as a CSV file. It utilizes the pandas library for data manipulation, numpy for numerical operations, matplotlib.pyplot for basic plotting, and seaborn for enhanced visualization. The read_csv() function from pandas is used to read the dataset, with an encoding parameter set to 'latin1' to correctly handle any special characters in the data. After loading the data into a DataFrame, the script uses the display() function to show the first few rows of the dataset, offering an initial look into the structure and contents of the file. This allows to quickly understand the data’s format, the different columns, and the type of information contained within it, which is crucial for performing any further analysis or visualization.
+- This code is designed to load and inspect the dataset of the most-streamed Spotify songs from 2023, provided in a CSV file format. It leverages the pandas library for data manipulation, numpy for numerical operations, matplotlib.pyplot for basic plotting, and seaborn for enhanced visualizations. The dataset is read using the read_csv() function from pandas, with the encoding parameter set to latin1 to properly handle any special characters. After loading the data into a DataFrame, the display() function is used to show the first few rows, providing an initial look at the dataset’s structure and contents. This step is essential for understanding the format, columns, and types of data, setting the foundation for further analysis or visualization.
 
 ``` python
 # Import necessary libraries for data manipulation, analysis, and visualization
@@ -55,14 +55,14 @@ display(spotify_data)
 ![Untitled design](https://github.com/user-attachments/assets/31d51e71-557f-43e5-a189-5d27c1fd151f)
 
 #### Key Insights
-- From the output, it displayed an organized table preview of the dataset, displaying the few rows of the Spotify data. This initial glimpse reveals the structure and data types of each column, which include a range of attributes from streaming counts to song characteristics and more. This initial view helps to identify any data inconsistencies, missing values, or patterns right from the start, which can inform any preprocessing and cleaning steps. This preview stage is essential for recognizing how each variable may impact the analysis of trends, correlations, or comparisons in later stages, providing an immediate snapshot of the dataset's potential insights.
+- The output displays a preview of the dataset in an organized table format. This initial glance reveals the structure and data types of each column, which include various attributes, such as streaming counts and song characteristics. This preview helps identify any inconsistencies, missing values, or patterns, informing any necessary preprocessing and cleaning steps. It provides an early snapshot of the dataset’s potential insights, setting the stage for trend analysis, correlations, and comparisons.
 
 ### 🔍 Overview of Dataset
    - **Dataset Size:** How many rows and columns?
    - **Data Types:** What are the types of each column? Any **missing values**?
 
 #### About the Code
-- This code performs basic descriptive statistics and data quality checks on the Spotify dataset. It first retrieves the dimensions of the dataset (i.e., the number of rows and columns) using the shape attribute of the DataFrame. It then prints the data types of each column to help understand the nature of the data (e.g., numerical, categorical) and assess potential transformations needed for analysis. The code also checks for missing values in each column using the isnull() function followed by sum() to count the number of missing values. By printing out the columns with missing values and their respective counts, the script provides insights into the completeness of the data, helping to identify any data cleaning tasks required before further analysis.
+- This section of the code provides basic descriptive statistics and data quality checks for the Spotify dataset. It first retrieves the dataset's dimensions (rows and columns) using the shape attribute of the DataFrame. Then, it prints the data types of each column to assess the nature of the data (e.g., numerical, non-numerical) and determine if any transformations are needed. The script also checks for missing values in each column using isnull() and sum(), counting the number of missing values. By printing the columns with missing values and their counts, this step offers insights into the dataset’s completeness and highlights any cleaning tasks required.
 
 ``` python
 # Retrieve the number of rows and columns in the dataset to understand its size
@@ -87,12 +87,12 @@ print(missing_values[missing_values > 0])
 <img width="1241" alt="Screenshot 2024-11-07 at 12 12 31 PM" src="https://github.com/user-attachments/assets/fe80cc10-62b5-4c4a-a2d4-b4a4e67901ca">
 
 #### Key Insights
-- From the output, it can be seen that the dataset contains 953 rows and 24 columns, providing a good amount of data for analysis. The data types of each column reveal that certain columns have incorrect data types, which should be converted. The missing values section shows that there are 50 missing values in the `in_shazam_charts` column and 95 missing values in the `key` column, highlighting areas where the data is incomplete. These incorrect data types and missing values may need to be addressed through data-cleaning methods.
+- The output reveals that the dataset contains 953 rows and 24 columns, providing a sufficient amount of data for analysis. The data types of each column indicate some discrepancies, with certain columns requiring type conversions. The missing values report shows that the in_shazam_charts column has 50 missing values, and the key column has 95 missing values, signaling areas where the data is incomplete. These discrepancies suggest the need for data-cleaning methods to address the incorrect data types and missing values before proceeding with further analysis.
 
 ### 🧹 Data Cleaning
 
 #### About the Code
-- This code focuses on cleaning and transforming the Spotify dataset to ensure consistency and accuracy for further analysis. It starts by defining two sets of columns: numeric_columns and string_columns, categorizing them based on expected data types. The numeric_columns are then converted to numerical data types using pd.to_numeric(), with any errors coerced to NaN values. Missing values in the numeric columns are filled with 0, and missing values in the string columns are filled with the placeholder 'unknown'. After this, the numeric columns are cast to integers to standardize the data. Duplicate rows are also removed to ensure the dataset contains only unique entries. For the released_month column, numerical month values are mapped to their respective month names using a dictionary, with invalid month numbers defaulting to 'unknown'. Finally, the script checks for any remaining missing values, confirms that the data types are correct after cleaning, and saves the cleaned dataset to a new CSV file, 'spotify-2023-cleaned.csv'.
+- This section focuses on cleaning and transforming the Spotify dataset to ensure accuracy and consistency. It starts by defining two sets of columns: numeric_columns and string_columns, categorizing them based on expected data types. The numeric columns are converted to numerical types using pd.to_numeric(), with errors coerced to NaN. Missing values in numeric columns are filled with 0, while missing values in string columns are filled with the placeholder ‘unknown’. Afterward, numeric columns are cast to integers for consistency. Duplicate rows are removed to ensure uniqueness. Additionally, the released_month column is converted from numeric values to corresponding month names using a dictionary, with invalid month numbers replaced by 'unknown'. The script then checks for any remaining missing values, verifies the data types, and saves the cleaned dataset as 'spotify-2023-cleaned.csv'.
 
 ``` python
 # Define the columns expected to have numerical data for conversion and cleaning
@@ -152,7 +152,8 @@ print(f"Cleaned data saved to {cleaned_file_path}.")
 <img width="1241" alt="Screenshot 2024-11-07 at 12 12 49 PM" src="https://github.com/user-attachments/assets/0762e09a-8dba-403f-9c9c-7f68a7625294">
 
 #### Key Insights
-- From the output, it can seen that after performing the cleaning operations, there are no remaining missing values in the dataset. The cleaned dataset now has consistent and appropriate data types for each column, such as int for numeric columns and object for string columns, confirming that all transformations were successful. Notably, the released_month column has been converted to string names of the months (e.g., January, February), replacing numeric month values with more readable names. The absence of missing values and the proper conversion of data types indicate that the dataset is now ready for further analysis and visualization. The cleaned dataset has been successfully saved as 'spotify-2023-cleaned.csv', ensuring that all changes are retained and accessible for future work.
+- The output confirms that after the cleaning process, there are no remaining missing values in the dataset. The data types are now consistent and appropriate, with numeric columns converted to integers and string columns remaining as objects. The released_month column is now populated with month names (e.g., January, February), making the data more readable. The cleaned dataset is saved successfully, ready for further analysis and visualization.
+
 
 ### 📊 Basic Descriptive Statistics
    - **Streams Statistics:** What are the **mean, median, and standard deviation** of the streams?
