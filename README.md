@@ -56,11 +56,7 @@ spotify_data = pd.read_csv('spotify-2023.csv', encoding='latin1')
 display(spotify_data)
 ```
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/f57a8e04-4bcf-4bad-a2cb-02b682504b1b" width="45%" height="auto" style="display:inline-block;"/>
-  <img src="https://github.com/user-attachments/assets/2b9c765b-feef-4775-9290-95ae6c5e936e" width="45%" height="auto" style="display:inline-block;"/>
-</p>
-
+![Untitled design](https://github.com/user-attachments/assets/31d51e71-557f-43e5-a189-5d27c1fd151f)
 
 ### Overview of Dataset
    - **Dataset Size:** How many rows and columns?
