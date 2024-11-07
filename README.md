@@ -35,6 +35,9 @@ Dataset source: [Kaggle - Most Streamed Spotify Songs 2023](https://www.kaggle.c
 
 ### 📥 Data Loading
 
+#### About the Code
+- This code snippet serves as the **initial step** for a **comprehensive data analysis and visualization project** on a **Spotify dataset**. By importing **essential libraries** such as **pandas**, **numpy**, **matplotlib**, and **seaborn**, the code provides the foundational tools needed for **manipulating, analyzing, and visualizing** the dataset. The core operation here is **loading the dataset** into a pandas **DataFrame** named **spotify_data** using `pd.read_csv()`. To ensure **special characters** are properly interpreted, the **encoding** is set to `latin1`, which helps avoid any **data import errors**. Finally, the `display(spotify_data)` command allows us to **preview the initial structure and content** of the dataset, which is vital for understanding the **variables** and potential **transformations** needed for subsequent analyses.
+
 ``` python
 # Import necessary libraries for data manipulation, analysis, and visualization
 import pandas as pd             
@@ -49,11 +52,16 @@ spotify_data = pd.read_csv('spotify-2023.csv', encoding='latin1')
 display(spotify_data)
 ```
 
+#### Key Insights
+
 ![Untitled design](https://github.com/user-attachments/assets/31d51e71-557f-43e5-a189-5d27c1fd151f)
 
 ### 🔍 Overview of Dataset
    - **Dataset Size:** How many rows and columns?
    - **Data Types:** What are the types of each column? Any **missing values**?
+
+#### About the Code
+This code snippet performs a preliminary analysis of a dataset containing information on the most-streamed Spotify songs in 2023. The purpose is to give an overview of the dataset's structure by analyzing its size, data types, and completeness. First, it retrieves the number of rows and columns, which provides a sense of the dataset's scope and volume. Then, it examines the data type of each column to identify whether the data is numeric, categorical, or text-based, which helps inform the types of analyses and transformations that might be necessary in further exploration. Lastly, it assesses missing values in each column, displaying any columns with incomplete data along with the respective counts. This process helps in identifying potential issues that could impact the accuracy and reliability of subsequent analyses and visualizations.
 
 ``` python
 # Retrieve the number of rows and columns in the dataset to understand its size
@@ -77,7 +85,12 @@ print(missing_values[missing_values > 0])
 
 <img width="1241" alt="Screenshot 2024-11-07 at 12 12 31 PM" src="https://github.com/user-attachments/assets/fe80cc10-62b5-4c4a-a2d4-b4a4e67901ca">
 
+#### Key Insights
+The output reveals that the dataset contains 953 rows and 24 columns, indicating a substantial collection of songs and attributes for analysis. This dataset size should provide a good basis for uncovering trends and patterns in the music streaming landscape for 2023. The output also lists the data types for each column, where most columns are appropriately classified, though some columns like 'streams,' 'in_deezer_playlists,' and 'in_shazam_charts' are marked as objects (text-based) instead of integers, which might require further cleaning if these columns are to be analyzed quantitatively. Additionally, the check for missing values indicates that there are missing values in two columns: 'in_shazam_charts' (with 50 missing values) and 'key' (with 95 missing values). These gaps could impact analyses involving these attributes, suggesting that handling or imputing missing values might be necessary for accurate insights.
+
 ### 🧹 Data Cleaning
+
+#### About the Code
 
 ``` python
 # Define the columns expected to have numerical data for conversion and cleaning
@@ -136,9 +149,13 @@ print(f"Cleaned data saved to {cleaned_file_path}.")
 
 <img width="1241" alt="Screenshot 2024-11-07 at 12 12 49 PM" src="https://github.com/user-attachments/assets/0762e09a-8dba-403f-9c9c-7f68a7625294">
 
+#### Key Insights
+
 ### 📊 Basic Descriptive Statistics
    - **Streams Statistics:** What are the **mean, median, and standard deviation** of the streams?
    - **Released Year & Artist Count:** What is the distribution? Are there any **trends** or **outliers**?
+
+#### About the Code
 
 ``` python
 # Load the cleaned Spotify dataset
@@ -227,9 +244,14 @@ print(unique_artist_outliers)
 
 <img width="1241" alt="Screenshot 2024-11-07 at 12 13 01 PM" src="https://github.com/user-attachments/assets/82ea0172-b6e8-4957-a094-5dc7fd31eadd">
 
+#### Key Insights
+
 ### 🏆 Top Performers
+
    - **Top Tracks:** Which track has the highest number of streams? List the **top 5 most streamed** tracks.
    - **Frequent Artists:** Who are the **top 5 most frequent artists** based on track count?
+
+#### About the Code
 
 ``` python
 # Split the 'artist(s)_name' column by commas and explode it to get each artist as a separate row
@@ -275,9 +297,13 @@ plt.show()
 
 <img width="1241" alt="Screenshot 2024-11-07 at 12 13 11 PM" src="https://github.com/user-attachments/assets/2f3eaf6b-d289-43cc-82e0-c5338f08530b">
 
+#### Key Insights
+
 ### 📅 Temporal Trends
    - **Yearly Trends:** Analyze the **trend** in the number of tracks released annually.
    - **Monthly Patterns:** Does the release pattern vary by month? Which month has the most releases?
+
+#### About the Code
 
 ``` python
 # Create a 2-row subplot with a large figure size for clear visibility and high resolution
@@ -310,9 +336,13 @@ plt.show()
 
 <img width="1241" alt="Screenshot 2024-11-07 at 12 13 18 PM" src="https://github.com/user-attachments/assets/53f86f87-9b37-4eb6-bb3c-1eb0c951e588">
 
+#### Key Insights
+
 ### 🎼 Genre and Music Characteristics
    - **Streams vs. Attributes:** Examine correlation between **streams** and musical attributes like **bpm, danceability_%, energy_%**.
    - **Attribute Relationships:** Is there a correlation between **danceability_%** and **energy_%**? How about **valence_%** and **acousticness_%**?
+
+#### About the Code
 
 ``` python
 # List of musical attributes to analyze correlation between
@@ -353,8 +383,12 @@ plt.show()
 
 <img width="1241" alt="Screenshot 2024-11-07 at 12 13 25 PM" src="https://github.com/user-attachments/assets/9c603d5f-0cc5-4fd0-9095-39026ba1c9f4">
 
+#### Key Insights
+
 ### 🌐 Platform Popularity
    - **Platform Comparison:** Compare track counts in **Spotify Playlists, Deezer Playlists**, and **Apple Playlists**. Which platform favors the most popular tracks?
+
+#### About the Code
 
 ``` python
 # Create a dictionary to store the sum of track counts for each platform category
@@ -390,9 +424,13 @@ plt.show()
 
 <img width="1241" alt="Screenshot 2024-11-07 at 12 13 31 PM" src="https://github.com/user-attachments/assets/b9ea8e76-f440-48bf-9b4a-60d1f9cb2592">
 
+#### Key Insights
+
 ### 💡 Advanced Analysis
    - **Key & Mode Patterns:** Based on **streams**, are there patterns among tracks with similar **key** or **mode** (Major vs. Minor)?
    - **Frequent Artists in Playlists/Charts:** Do certain **artists** consistently appear in more playlists or charts?
+
+#### About the Code
 
 ``` python
 # Filter the dataset to exclude rows where the 'key' column has 'unknown' values
@@ -459,5 +497,7 @@ plt.show()
 ```
 
 <img width="1241" alt="Screenshot 2024-11-07 at 12 13 38 PM" src="https://github.com/user-attachments/assets/6c5a709d-0462-4d24-8771-3d4d54b6dc1d">
+
+#### Key Insights
 
 ---
