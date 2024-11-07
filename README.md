@@ -252,11 +252,11 @@ print(unique_artist_outliers)
 - From the output, the summary statistics for streams show that the average number of streams is about 513 million, with a median of 290 million and a high standard deviation of 566 million, indicating significant variation in stream counts across tracks. The distribution of released years reveals that 2022 had the highest number of releases, reflecting the growing prominence of digital platforms over the years. Additionally, the artist count distribution shows that solo artists dominate the dataset, as indicated by the frequency of 1 artist per track. The boxplots further confirm the spread of data for these variables. Regarding outliers, the dataset contains some extreme values in both released year and artist count, with years like 1930, 1942, and up to 2016 appearing as outliers, as well as tracks with 2 to 8 artists, which are considered outliers for artist count.
 
 ### 🏆 Top Performers
-
    - **Top Tracks:** Which track has the highest number of streams? List the **top 5 most streamed** tracks.
    - **Frequent Artists:** Who are the **top 5 most frequent artists** based on track count?
 
 #### About the Code
+- This code identifies the top performers from a Spotify dataset by analyzing the most streamed tracks and the most frequent artists. It first extracts and splits the 'artist(s)_name' column into individual artists, then counts the frequency of each artist’s appearance in the dataset to determine the top 5 most frequent artists. The code then generates two horizontal bar charts: one for the top 5 most streamed tracks based on the total number of streams, and another for the top 5 most frequent artists based on the number of tracks associated with them.
 
 ``` python
 # Split the 'artist(s)_name' column by commas and explode it to get each artist as a separate row
@@ -303,12 +303,14 @@ plt.show()
 <img width="1241" alt="Screenshot 2024-11-07 at 12 13 11 PM" src="https://github.com/user-attachments/assets/2f3eaf6b-d289-43cc-82e0-c5338f08530b">
 
 #### Key Insights
+- From the output, it showed that the top 5 most streamed tracks include "Blinding Lights" by The Weeknd, with over 3.7 billion streams, followed by "Shape of You" by Ed Sheeran, with 3.56 billion streams, and "Someone You Loved" by Lewis Capaldi at 2.89 billion streams. These tracks dominate the streams, highlighting their massive popularity. Regarding top artists, the analysis reveals that Bad Bunny leads with 40 tracks, followed by Taylor Swift with 38 tracks, and The Weeknd with 37 tracks. This suggests that these artists are heavily featured in the dataset, showcasing their prolific output across Spotify.
 
 ### 📅 Temporal Trends
    - **Yearly Trends:** Analyze the **trend** in the number of tracks released annually.
    - **Monthly Patterns:** Does the release pattern vary by month? Which month has the most releases?
 
 #### About the Code
+- This code analyzes the temporal trends in track releases from a Spotify dataset. The analysis focuses on two key aspects: the number of tracks released per year and the number of tracks released per month. First, the script calculates the number of tracks released each year, sorted in chronological order, and visualizes the trends using a line plot. Then, it examines the release patterns across the months, counting the number of tracks released each month and plotting the results to observe any seasonal patterns. The code generates two line charts to show the trends over time, providing insights into the frequency and timing of track releases.
 
 ``` python
 # Create a 2-row subplot with a large figure size for clear visibility and high resolution
@@ -342,12 +344,14 @@ plt.show()
 <img width="1241" alt="Screenshot 2024-11-07 at 12 13 18 PM" src="https://github.com/user-attachments/assets/53f86f87-9b37-4eb6-bb3c-1eb0c951e588">
 
 #### Key Insights
+- From the output, the number of tracks released per year shows a clear upward trend starting around 2010, with the number of releases steadily increasing over the years. This indicates a growth in the number of tracks released on Spotify, reflecting the platform's expansion and the increasing number of artists contributing to it. Regarding the monthly release patterns, the line graph reveals that January consistently sees the most track releases, followed by May. August stands out as the month with the fewest releases, suggesting possible seasonal lulls in new music production or release strategies.
 
 ### 🎼 Genre and Music Characteristics
    - **Streams vs. Attributes:** Examine correlation between **streams** and musical attributes like **bpm, danceability_%, energy_%**.
    - **Attribute Relationships:** Is there a correlation between **danceability_%** and **energy_%**? How about **valence_%** and **acousticness_%**?
 
 #### About the Code
+- This code examines the correlation between streams and various musical attributes (such as bpm, danceability, energy, valence, and acousticness) in the dataset. By using a correlation matrix, the script calculates the strength and direction of the relationships between these attributes. The heatmap visualization provides a clear view of the correlations, allowing to see how strongly each musical characteristic correlates with the number of streams. Additionally, the code explores specific correlations, including the relationship between danceability_% and energy_%, and valence_% and acousticness_%, to identify any notable patterns.
 
 ``` python
 # List of musical attributes to analyze correlation between
@@ -389,11 +393,13 @@ plt.show()
 <img width="1241" alt="Screenshot 2024-11-07 at 12 13 25 PM" src="https://github.com/user-attachments/assets/9c603d5f-0cc5-4fd0-9095-39026ba1c9f4">
 
 #### Key Insights
+- From the output, the correlation heatmap shows that the streams attribute has a weak correlation with all the musical attributes. For instance, bpm has a correlation of -0.0020, and danceability_% has a -0.1045 correlation with streams, suggesting that these musical features have little to no impact on the number of streams. Among the musical attributes, danceability_% and energy_% have a slightly stronger positive correlation (0.1981), indicating a modest relationship between these two attributes. On the other hand, valence_% and acousticness_% show a weak negative correlation (-0.0819), suggesting a minor inverse relationship between these characteristics.
 
 ### 🌐 Platform Popularity
    - **Platform Comparison:** Compare track counts in **Spotify Playlists, Deezer Playlists**, and **Apple Playlists**. Which platform favors the most popular tracks?
 
 #### About the Code
+- This code compares the number of tracks present in different platforms: Spotify Playlists, Spotify Charts, Apple Playlists, Apple Charts, Deezer Playlists, Deezer Charts, and Shazam Charts. By summing the track counts in each platform, the code generates a bar plot to visually compare the number of tracks across the platforms. The plot provides a clear view of which platform hosts the most tracks and helps identify where the most popular tracks are likely favored.
 
 ``` python
 # Create a dictionary to store the sum of track counts for each platform category
@@ -430,6 +436,7 @@ plt.show()
 <img width="1241" alt="Screenshot 2024-11-07 at 12 13 31 PM" src="https://github.com/user-attachments/assets/b9ea8e76-f440-48bf-9b4a-60d1f9cb2592">
 
 #### Key Insights
+- From the output, it is observed that Spotify Playlists has the highest track count, with 4,955,719 tracks, indicating that Spotify likely features a large variety of tracks. Spotify Charts, however, has a much lower track count of 11,445 tracks, showing that only a small number of tracks make it to the charts. On Apple, Apple Playlists has 64,625 tracks, while Apple Charts shows 49,469 tracks, which suggests that Apple charts feature a significant proportion of its playlist tracks. Deezer Playlists has 95,913 tracks, but Deezer Charts includes only 2,541, indicating that Deezer charts are much more selective in terms of track inclusion. Lastly, Shazam Charts includes 45,854 tracks, suggesting that Shazam charts feature a considerable amount of tracks but still significantly fewer than the playlists.
 
 ### 💡 Advanced Analysis
    - **Key & Mode Patterns:** Based on **streams**, are there patterns among tracks with similar **key** or **mode** (Major vs. Minor)?
