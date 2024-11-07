@@ -6,6 +6,32 @@ Dataset source: [Kaggle - Most Streamed Spotify Songs 2023](https://www.kaggle.c
 
 ---
 
+# 📑 Table of Contents
+
+- [❓ Guide Questions](#-guide-questions)
+   - [🔍 Overview of Dataset](#overview-of-dataset)
+     - [Dataset Size](#dataset-size)
+     - [Data Types](#data-types)
+   - [📐 Basic Descriptive Statistics](#basic-descriptive-statistics)
+     - [Streams Statistics](#streams-statistics)
+     - [Released Year & Artist Count](#released-year--artist-count)
+   - [🌟 Top Performers](#top-performers)
+     - [Top Tracks](#top-tracks)
+     - [Frequent Artists](#frequent-artists)
+   - [📅 Temporal Trends](#temporal-trends)
+     - [Yearly Trends](#yearly-trends)
+     - [Monthly Patterns](#monthly-patterns)
+   - [🎶 Genre and Music Characteristics](#genre-and-music-characteristics)
+     - [Streams vs. Attributes](#streams-vs-attributes)
+     - [Attribute Relationships](#attribute-relationships)
+   - [🌐 Platform Popularity](#platform-popularity)
+     - [Platform Comparison](#platform-comparison)
+   - [💡 Advanced Analysis](#advanced-analysis)
+     - [Key & Mode Patterns](#key--mode-patterns)
+     - [Frequent Artists in Playlists/Charts](#frequent-artists-in-playlistscharts)
+    
+---
+
 ## 📈 Analysis Workflow (will change pa)
 
 - **Data Loading, Overview, and Cleaning**: Load the dataset, handle missing values, and confirm data types.
@@ -450,9 +476,3 @@ plt.show()
    - Summarize insights about tracks, artists, or musical trends that could help explain a track's popularity.
 
 ---
-
-
-
-
-
-
