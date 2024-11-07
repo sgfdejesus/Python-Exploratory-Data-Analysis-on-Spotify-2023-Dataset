@@ -451,6 +451,9 @@ plt.tight_layout()
 plt.show()
 ```
 
+<img width="1010" alt="Screenshot 2024-11-07 at 12 04 54 PM" src="https://github.com/user-attachments/assets/7f7879ea-2d58-476e-9def-e3f1e165f003">
+
+
 ---
 
 # waley pa
