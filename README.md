@@ -36,9 +36,9 @@ Dataset source: [Kaggle - Most Streamed Spotify Songs 2023](https://www.kaggle.c
 ### 📥 Data Loading
 
 #### About the Code
-- This code snippet serves as the **initial step** for a **comprehensive data analysis and visualization project** on a **Spotify dataset**. By importing **essential libraries** such as **pandas**, **numpy**, **matplotlib**, and **seaborn**, the code provides the foundational tools needed for **manipulating, analyzing, and visualizing** the dataset. The core operation here is **loading the dataset** into a pandas **DataFrame** named **spotify_data** using `pd.read_csv()`. To ensure **special characters** are properly interpreted, the **encoding** is set to `latin1`, which helps avoid any **data import errors**. Finally, the `display(spotify_data)` command allows us to **preview the initial structure and content** of the dataset, which is vital for understanding the **variables** and potential **transformations** needed for subsequent analyses.
+- This code snippet serves as the initial step for a comprehensive data analysis and visualization project on a **Spotify dataset**. By importing essential libraries such as **pandas**, **numpy**, **matplotlib**, and **seaborn**, the code provides the foundational tools needed for manipulating, analyzing, and visualizing the dataset. The core operation here is loading the dataset into a **pandas DataFrame** named `spotify_data` using `pd.read_csv()`. To ensure special characters are properly interpreted, the **encoding** is set to `latin1`, which helps avoid any data import errors. Finally, the '**display(spotify_data)**' command allows us to preview the initial structure and content of the dataset, which is vital for understanding the variables and potential transformations needed for subsequent analyses.
 
-``` python
+`` python
 # Import necessary libraries for data manipulation, analysis, and visualization
 import pandas as pd             
 import numpy as np    
@@ -52,9 +52,10 @@ spotify_data = pd.read_csv('spotify-2023.csv', encoding='latin1')
 display(spotify_data)
 ```
 
-#### Key Insights
-
 ![Untitled design](https://github.com/user-attachments/assets/31d51e71-557f-43e5-a189-5d27c1fd151f)
+
+#### Key Insights
+- Upon executing this code, we observe an organized table preview of the dataset, displaying the first few rows of the Spotify data. This initial glimpse reveals the structure and data types of each column, which include a range of attributes from streaming counts to song characteristics and more. This initial view helps us identify any data inconsistencies, missing values, or patterns right from the start, which can inform our preprocessing and cleaning steps. This preview stage is essential for recognizing how each variable may impact our analysis of trends, correlations, or comparisons in later stages, providing an immediate snapshot of the dataset's potential insights.
 
 ### 🔍 Overview of Dataset
    - **Dataset Size:** How many rows and columns?
