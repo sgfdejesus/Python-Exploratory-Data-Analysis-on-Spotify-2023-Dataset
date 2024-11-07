@@ -443,6 +443,7 @@ plt.show()
    - **Frequent Artists in Playlists/Charts:** Do certain **artists** consistently appear in more playlists or charts?
 
 #### About the Code
+- This code performs an advanced analysis of Spotify track data, focusing on streaming patterns based on musical attributes such as key and mode (Major vs. Minor). It calculates the total number of streams for each musical key and mode, then visualizes this information using bar plots. Additionally, the analysis compares the most frequently appearing artists in both playlists and charts across platforms. The code produces four bar plots: one for streams by key, one for streams by mode, one for the top 5 artists in playlists, and one for the top 5 artists in charts. This helps identify patterns in the popularity of tracks based on key, mode, and the presence of artists in playlists or charts.
 
 ``` python
 # Filter the dataset to exclude rows where the 'key' column has 'unknown' values
@@ -511,6 +512,9 @@ plt.show()
 <img width="1241" alt="Screenshot 2024-11-07 at 12 13 38 PM" src="https://github.com/user-attachments/assets/6c5a709d-0462-4d24-8771-3d4d54b6dc1d">
 
 #### Key Insights
+From the output, the analysis reveals several interesting trends. First, the total streams by key indicate that C# is the most popular key with a significant stream count of 72,513,629,843, followed by G with 43,449,542,492 streams. On the other hand, D# is the least popular key, with only 18,250,205,825 streams, suggesting a lower preference for this key in the dataset. In terms of musical mode, Major mode has a much higher stream count (293,623,203,541) compared to Minor mode (195,835,625,001), indicating that major keys are generally more favored in terms of streams.
+
+The top 5 artists in playlists show that The Weeknd leads with 240,718 appearances, followed by Eminem (155,860) and Ed Sheeran (147,317). When comparing total streams in charts, Bad Bunny emerges as the most frequently appearing artist with 4,459 appearances, followed closely by Taylor Swift (4,369) and The Weeknd (4,366). This indicates a strong presence of these artists in the charts, in addition to their success in playlists. Interestingly, the analysis also highlights that The Weeknd, Bad Bunny, and Taylor Swift appear in both total playlists and total charts, underlining their widespread popularity across multiple platforms.
 
 ---
 
