@@ -33,15 +33,6 @@ Dataset source: [Kaggle - Most Streamed Spotify Songs 2023](https://www.kaggle.c
     
 ---
 
-## 📈 Analysis Workflow (will change pa)
-
-- **Data Loading, Overview, and Cleaning**: Load the dataset, handle missing values, and confirm data types.
-- **Exploratory Analysis**: Perform descriptive statistics and initial visualizations to gain insights.
-- **In-Depth Analysis**: Dive deeper into specific aspects like **temporal trends** and **platform comparisons**.
-- **Insight Generation**: Summarize findings and provide recommendations.
-
----
-
 ### 📥 Data Loading
 
 ``` python
@@ -468,28 +459,5 @@ plt.show()
 ```
 
 <img width="1241" alt="Screenshot 2024-11-07 at 12 13 38 PM" src="https://github.com/user-attachments/assets/6c5a709d-0462-4d24-8771-3d4d54b6dc1d">
-
----
-
-# waley pa
-
-## 📋 General Guidelines (hahahahha)
-
-1. **Dataset Familiarization**  
-   - Inspect the dataset structure, checking for **missing values** and **data types**.
-   - Conduct an initial exploration to understand the **features** available.
-
-2. **Summary Statistics**  
-   - Present key metrics such as **number of streams**, **release dates**, and **musical attributes** (e.g., BPM, danceability).
-
-3. **Visualizations**  
-   - Utilize visualizations (e.g., bar charts, histograms, scatter plots) to identify trends. Ensure **clear labeling** for interpretability.
-
-4. **Correlation Analysis**  
-   - Examine relationships between **streams** and attributes like **tempo, energy**, or **playlist appearances**.
-   - Provide insights and recommendations based on these analyses.
-
-5. **Insights and Recommendations**  
-   - Summarize insights about tracks, artists, or musical trends that could help explain a track's popularity.
 
 ---
