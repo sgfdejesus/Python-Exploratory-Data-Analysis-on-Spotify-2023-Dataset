@@ -9,25 +9,25 @@ Dataset source: [Kaggle - Most Streamed Spotify Songs 2023](https://www.kaggle.c
 ## 🗃️ Table of Contents
 
 - [📥 Data Loading](#-data-loading)
-- [🔍 Overview of Dataset](#overview-of-dataset)
+- [🔍 Overview of Dataset](#-overview-of-dataset)
    - Dataset Size
    - Data Types
-- [🧹 Data Cleaning](#data_cleaning)
-- [📊 Basic Descriptive Statistics](#basic-descriptive-statistics)
+- [🧹 Data Cleaning](#-data_cleaning)
+- [📊 Basic Descriptive Statistics](#-basic-descriptive-statistics)
    - Streams Statistics
    - Released Year & Artist Count
-- [🏆 Top Performers](#top-performers)
+- [🏆 Top Performers](#-top-performers)
    - Top Tracks
    - Frequent Artists
-- [📅 Temporal Trends](#temporal-trends)
+- [📅 Temporal Trends](#-temporal-trends)
    - Yearly Trends
    - Monthly Patterns
-- [🎼 Genre and Music Characteristics](#genre-and-music-characteristics)
+- [🎼 Genre and Music Characteristics](#-genre-and-music-characteristics)
    - Streams vs. Attributes
    - Attribute Relationships
-- [🌐 Platform Popularity](#platform-popularity)
+- [🌐 Platform Popularity](#-platform-popularity)
    - Platform Comparison
-- [💡 Advanced Analysis](#advanced-analysis)
+- [💡 Advanced Analysis](#-advanced-analysis)
    - Key & Mode Patterns
    - Frequent Artists in Playlists/Charts
     
